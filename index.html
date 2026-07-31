@@ -49,7 +49,7 @@ header{
 }
 .header-inner{
   display:flex; align-items:center; justify-content:space-between;
-  padding:20px 28px; max-width:1120px; margin:0 auto;
+  padding:20px 28px; max-width:1340px; margin:0 auto; gap:12px;
 }
 .logo{
   font-family:var(--font-display);
@@ -57,10 +57,12 @@ header{
   font-size:1.4rem;
   color:var(--green-dark);
   display:flex; align-items:center; gap:8px;
+  min-width:0; overflow:hidden;
 }
+.logo span, .logo > span:last-child{overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 .logo img{height:34px; width:auto; display:block; flex-shrink:0;}
 .logo span{color:var(--gold);}
-nav{display:flex; gap:26px; align-items:center;}
+nav{display:flex; gap:20px; align-items:center;}
 nav a.nav-link{font-size:0.95rem; font-weight:600; color:var(--ink); opacity:0.75; transition:opacity 0.15s; white-space:nowrap;}
 nav a.nav-link:hover{opacity:1;}
 nav a.nav-link.active{opacity:1; color:var(--green);}
@@ -98,11 +100,15 @@ nav a.nav-link.active{opacity:1; color:var(--green);}
     gap:18px; display:none;
   }
   nav.open{display:flex;}
-  .nav-contact-group{align-self:flex-start; display:flex; align-items:center; gap:14px;}
+  .nav-contact-group{align-self:flex-start; display:flex; flex-direction:column; align-items:flex-start; gap:10px;}
   .nav-toggle{
     display:block; background:var(--green); color:#fff; border:none;
-    border-radius:999px; padding:10px 18px; font-weight:600; font-size:0.9rem; cursor:pointer;
+    border-radius:999px; padding:8px 14px; font-weight:600; font-size:0.85rem; cursor:pointer;
+    flex-shrink:0;
   }
+  .header-inner{padding:16px 18px;}
+  .logo{font-size:1.05rem; gap:6px;}
+  .logo img{height:26px;}
 }
 
 /* ---------- Page header banner (for subpages) ---------- */
@@ -191,7 +197,7 @@ h1 em{font-style:italic; color:#8ACF62;}
 
 @media (max-width:860px){
   .hero-inner{grid-template-columns:1fr;}
-  .hero-photo{order:-1; max-width:380px; margin:0 auto;}
+  .hero-photo{max-width:380px; margin:0 auto;}
 }
 
 /* ---------- Section shell ---------- */
@@ -321,11 +327,11 @@ h2{
 
 /* ---------- Contact page ---------- */
 .contact-grid{
-  display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start;
+  display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:40px; align-items:start;
 }
 .contact-info{
   background:var(--green-dark); color:#EAF1EC;
-  border-radius:var(--radius); padding:36px;
+  border-radius:var(--radius); padding:36px; min-width:0;
 }
 .contact-info h3{font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:#fff; margin-bottom:18px;}
 .contact-info .line{display:flex; flex-direction:column; margin-bottom:20px;}
@@ -335,7 +341,7 @@ h2{
 
 .contact-form{
   background:var(--card); border-radius:var(--radius); padding:36px;
-  box-shadow:var(--shadow-sm);
+  box-shadow:var(--shadow-sm); min-width:0;
 }
 .form-row{margin-bottom:18px;}
 .form-row label{display:block; font-weight:600; font-size:0.9rem; margin-bottom:8px; color:var(--ink);}
@@ -346,7 +352,7 @@ h2{
 .form-row input:focus, .form-row textarea:focus{outline:2px solid var(--green); border-color:var(--green);}
 .form-row textarea{resize:vertical; min-height:120px;}
 
-@media (max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+@media (max-width:860px){.contact-grid{grid-template-columns:minmax(0,1fr);}}
 
 /* ---------- CTA band ---------- */
 .cta-band .wrap{
