@@ -12,24 +12,25 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pricing — Rancho Bookkeeping</title>
-<meta name="description" content="Transparent monthly QuickBooks bookkeeping pricing with no contracts.">
-<link rel="canonical" href="https://ranchobookkeeping.com/pricing.html">
+<title>Bookkeeping Services in West Covina, CA | Rancho Bookkeeping</title>
+<meta name="description" content="Rancho Bookkeeping offers monthly bookkeeping and cleanup or catch-up services for small businesses in West Covina. Based in Rancho Cucamonga, no long-term contracts.">
 <link rel="icon" type="image/png" href="/logo.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Pricing — Rancho Bookkeeping">
-<meta property="og:description" content="Transparent monthly bookkeeping pricing with no contracts.">
+<meta property="og:title" content="Bookkeeping Services in West Covina, CA | Rancho Bookkeeping">
+<meta property="og:description" content="Rancho Bookkeeping offers monthly bookkeeping and cleanup or catch-up services for small businesses in West Covina. Based in Rancho Cucamonga, no long-term contracts.">
 <meta property="og:image" content="https://ranchobookkeeping.com/logo.png">
-<meta property="og:url" content="https://ranchobookkeeping.com/pricing.html">
+<meta property="og:url" content="https://ranchobookkeeping.com/bookkeeping-west-covina.html">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pricing — Rancho Bookkeeping">
-<meta name="twitter:description" content="Transparent monthly bookkeeping pricing with no contracts.">
+<meta name="twitter:title" content="Bookkeeping Services in West Covina, CA | Rancho Bookkeeping">
+<meta name="twitter:description" content="Rancho Bookkeeping offers monthly bookkeeping and cleanup or catch-up services for small businesses in West Covina. Based in Rancho Cucamonga, no long-term contracts.">
 <meta name="twitter:image" content="https://ranchobookkeeping.com/logo.png">
 
+<link rel="canonical" href="https://ranchobookkeeping.com/bookkeeping-west-covina.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+
 :root{
   --cream:#FBF7EF;
   --card:#FFFFFF;
@@ -146,10 +147,20 @@ nav a.nav-link.active{opacity:1; color:var(--green);}
 .page-banner p{color:var(--ink-soft); font-size:1.05rem; max-width:56ch; margin:0 auto;}
 
 /* ---------- Hero (home) ---------- */
-.hero{padding:64px 0 90px;}
+.hero{
+  padding:64px 0 90px;
+  background:linear-gradient(160deg, var(--green) 0%, var(--green-dark) 100%);
+}
 .hero-inner{
   display:grid; grid-template-columns:1.05fr 0.95fr;
   gap:56px; align-items:center;
+}
+.hero .eyebrow{
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(138,207,98,0.22); color:#8ACF62;
+  font-weight:600; font-size:0.82rem;
+  padding:7px 16px; border-radius:999px;
+  margin-bottom:22px;
 }
 .eyebrow{
   display:inline-flex; align-items:center; gap:8px;
@@ -158,6 +169,7 @@ nav a.nav-link.active{opacity:1; color:var(--green);}
   padding:7px 16px; border-radius:999px;
   margin-bottom:22px;
 }
+.hero h1{color:#fff;}
 h1{
   font-family:var(--font-display);
   font-weight:700;
@@ -168,7 +180,7 @@ h1{
 }
 h1 em{font-style:italic; color:#8ACF62;}
 .hero p.lede{
-  font-size:1.12rem; color:var(--ink-soft);
+  font-size:1.12rem; color:#D6E2DA;
   max-width:48ch; margin-bottom:34px;
 }
 .cta-row{display:flex; gap:16px; flex-wrap:wrap;}
@@ -181,38 +193,33 @@ h1 em{font-style:italic; color:#8ACF62;}
 .btn-primary:hover{background:var(--green-dark); transform:translateY(-2px);}
 .btn-secondary{background:var(--card); color:var(--green-dark); border:1.5px solid var(--line);}
 .btn-secondary:hover{border-color:var(--green); transform:translateY(-2px);}
+.hero .btn-primary{background:var(--gold); box-shadow:none;}
+.hero .btn-primary:hover{background:#124929;}
+.hero .btn-secondary{background:rgba(255,255,255,0.96); color:var(--green-dark); border-color:transparent;}
+.hero .btn-secondary:hover{background:#fff; border-color:transparent;}
 
 .hero-photo{
   position:relative;
-  background:linear-gradient(160deg, var(--green) 0%, var(--green-dark) 100%);
   border-radius:28px;
-  aspect-ratio:4/4.3;
-  display:flex; align-items:flex-end;
   box-shadow:var(--shadow);
   overflow:hidden;
+  max-width:380px;
+  margin-left:auto;
 }
-.hero-photo::before{
+.hero-photo img{
+  width:100%; height:auto;
+  display:block;
+}
+.hero-photo::after{
   content:"";
   position:absolute; inset:0;
-  background:radial-gradient(circle at 70% 20%, rgba(86,153,47,0.35), transparent 55%);
+  background:linear-gradient(200deg, rgba(17,85,102,0.22) 0%, rgba(17,85,102,0.02) 45%, rgba(86,153,47,0.16) 100%);
+  pointer-events:none;
 }
-.hero-card{
-  position:relative;
-  margin:20px; padding:22px;
-  background:rgba(255,255,255,0.96);
-  border-radius:16px;
-  width:calc(100% - 40px);
-  box-shadow:var(--shadow-sm);
-}
-.hero-card-title{font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); margin-bottom:12px;}
-.hero-row{display:flex; justify-content:space-between; font-size:0.92rem; padding:7px 0; color:var(--ink);}
-.hero-row span:last-child{color:var(--green); font-weight:700;}
-.hero-row.total{border-top:1.5px solid var(--line); margin-top:6px; padding-top:12px; font-weight:700;}
-.hero-row.total span:last-child{color:var(--gold);}
 
 @media (max-width:860px){
   .hero-inner{grid-template-columns:1fr;}
-  .hero-photo{max-width:380px; margin:0 auto; aspect-ratio:4/3.4;}
+  .hero-photo{max-width:380px; margin:0 auto;}
 }
 
 /* ---------- Section shell ---------- */
@@ -230,7 +237,7 @@ h2{
 .section-head p{color:var(--ink-soft); font-size:1.05rem;}
 
 /* ---------- Services ---------- */
-.services-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:26px;}
+.services-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:26px; max-width:760px; margin:0 auto;}
 .service-card{
   background:var(--card); border-radius:var(--radius);
   padding:34px 28px; box-shadow:var(--shadow-sm);
@@ -272,8 +279,8 @@ h2{
   background:var(--gold); color:#fff; font-weight:700; font-size:0.75rem;
   padding:6px 14px; border-radius:999px;
 }
-.price-card h2{font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--green-dark); margin-bottom:8px;}
-.price-card.featured h2{color:#fff;}
+.price-card h3{font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--green-dark); margin-bottom:8px;}
+.price-card.featured h3{color:#fff;}
 .price-card .tagline{font-size:0.9rem; color:var(--ink-soft); margin-bottom:22px; min-height:2.6em;}
 .price-card.featured .tagline{color:#D6E2DA;}
 .price-amount{
@@ -398,6 +405,7 @@ footer{padding:56px 0 32px; font-size:0.92rem;}
 
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;} *{transition:none !important;}}
 
+
 </style>
 <script type="application/ld+json">
 {
@@ -485,6 +493,74 @@ footer{padding:56px 0 32px; font-size:0.92rem;}
     {
       "@type": "City",
       "name": "Norco"
+    },
+    {
+      "@type": "City",
+      "name": "Riverside"
+    },
+    {
+      "@type": "City",
+      "name": "Corona"
+    },
+    {
+      "@type": "City",
+      "name": "Fullerton"
+    },
+    {
+      "@type": "City",
+      "name": "Jurupa Valley"
+    },
+    {
+      "@type": "City",
+      "name": "Glendora"
+    },
+    {
+      "@type": "City",
+      "name": "Walnut"
+    },
+    {
+      "@type": "City",
+      "name": "Azusa"
+    },
+    {
+      "@type": "City",
+      "name": "Yorba Linda"
+    },
+    {
+      "@type": "City",
+      "name": "Loma Linda"
+    },
+    {
+      "@type": "City",
+      "name": "West Covina"
+    },
+    {
+      "@type": "City",
+      "name": "Rowland Heights"
+    },
+    {
+      "@type": "City",
+      "name": "Highland"
+    },
+    {
+      "@type": "City",
+      "name": "Redlands"
+    },
+    {
+      "@type": "City",
+      "name": "Moreno Valley"
+    },
+    {
+      "@type": "City",
+      "name": "Pasadena"
+    },
+    {
+      "@type": "City",
+      "name": "Perris"
+    },
+    {
+      "@type": "City",
+      "name": "Norwalk"
     }
   ],
   "description": "Remote monthly bookkeeping and cleanup/catch-up services for small businesses, run by a husband-and-wife team based in Rancho Cucamonga, CA."
@@ -501,7 +577,7 @@ footer{padding:56px 0 32px; font-size:0.92rem;}
       <a class="nav-link" href="/">Home</a>
       <a class="nav-link" href="about.html">About</a>
       <a class="nav-link" href="services.html">Services</a>
-      <a class="nav-link active" href="pricing.html">Pricing</a>
+      <a class="nav-link" href="pricing.html">Pricing</a>
       <a class="nav-link" href="service-areas.html">Service Areas</a>
       <a class="nav-link" href="blog.html">Blog</a>
       <a class="nav-link" href="contact.html">Contact</a>
@@ -516,63 +592,83 @@ footer{padding:56px 0 32px; font-size:0.92rem;}
 <main>
 
   <div class="page-banner wrap">
-    <div class="section-eyebrow">Pricing</div>
-    <h1>Transparent pricing, no contracts</h1>
-    <p>Clean, reliable bookkeeping costs far less than the tax penalties and bad decisions that come from messy books.</p>
+    <div class="section-eyebrow">Bookkeeping in West Covina, CA</div>
+    <h1>Bookkeeping Services in West Covina, CA</h1>
+    <p>Business owners in West Covina, CA come to Rancho Bookkeeping when they're tired of messy books and confusing reports. We reconcile your accounts, categorize every transaction, and hand you financials you can actually trust — all handled by a husband and wife team based in Rancho Cucamonga.</p>
   </div>
 
   <section>
     <div class="wrap">
-      <div class="pricing-grid">
-        <div class="price-card">
-          <h2>Essential</h2>
-          <div class="tagline">Simple, accurate bookkeeping every month</div>
-          <div class="price-amount">$350 – $400<small>per month</small></div>
+      <div class="section-head">
+        <div class="section-eyebrow">What we do</div>
+        <h2>Bookkeeping Services</h2>
+        <p>Stay hands-on or hand it off completely — either way, your numbers stay clean and current.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">01</div>
+          <h3>Monthly Bookkeeping</h3>
+          <p>A reliable monthly process that keeps your books accurate and tax-ready, all year.</p>
           <ul>
-            <li>Monthly bank and card reconciliation</li>
-            <li>Expense categorization with bank rules</li>
-            <li>Monthly financial statements</li>
+            <li>All bookkeeping done in QuickBooks Online</li>
+            <li>Bank and credit cards reconciled monthly</li>
+            <li>Consistent categorization rules</li>
+            <li>Financial statements delivered monthly, typically well within 20 business days</li>
+            <li>Direct email access to your bookkeeper</li>
           </ul>
-          <div class="fit">Best for freelancers and solo owners under $100k revenue</div>
         </div>
-
-        <div class="price-card featured">
-          <div class="featured-tag">Most popular</div>
-          <h2>Professional</h2>
-          <div class="tagline">Clear numbers that support growth</div>
-          <div class="price-amount">$400 – $500<small>per month</small></div>
+        <div class="service-card">
+          <div class="service-icon">02</div>
+          <h3>Cleanup &amp; Catch-Up</h3>
+          <p>Behind on your books? We rebuild and organize everything so you can file and decide with confidence.</p>
           <ul>
-            <li>Everything in Essential</li>
-            <li>Light AR and AP tracking</li>
-            <li>Quarterly performance summary</li>
-            <li>Priority support</li>
+            <li>Months or years of records rebuilt in QuickBooks Online</li>
+            <li>Bank statements imported and matched</li>
+            <li>Every transaction reviewed line by line</li>
+            <li>Clean handoff for your CPA</li>
           </ul>
-          <div class="fit">Best for growing businesses with multiple accounts</div>
-        </div>
-
-        <div class="price-card">
-          <h2>Premium</h2>
-          <div class="tagline">Hands-on support and advanced reporting</div>
-          <div class="price-amount">$500 – $800<small>per month</small></div>
-          <ul>
-            <li>Everything in Professional</li>
-            <li>Custom financial reports</li>
-            <li>Accrual, payroll, and loan tracking</li>
-            <li>CPA-ready books for tax time</li>
-          </ul>
-          <div class="fit">Best for established or multi-entity businesses</div>
         </div>
       </div>
+      <div style="text-align:center; margin-top:36px;">
+        <a class="btn btn-secondary" href="services.html">View all services</a>
+      </div>
+    </div>
+  </section>
 
-      <div class="quarterly-note">Not ready for monthly service? Quarterly bookkeeping is available at <strong>85% of the monthly rate</strong>, and annual bookkeeping at <strong>75% of the monthly rate</strong>.</div>
+  <section id="about" class="about">
+    <div class="wrap">
+      <div class="section-head" style="text-align:center; margin:0 auto;">
+        <div class="section-eyebrow">Why West Covina business owners choose us</div>
+        <h2 style="max-width:26ch; margin-left:auto; margin-right:auto;">We have one goal: clean numbers you can trust</h2>
+      </div>
+      <div class="about-inner" style="margin-top:40px; grid-template-columns:1fr; max-width:640px; margin-left:auto; margin-right:auto; text-align:center;">
+        <div>
+          <p class="copy">For West Covina business owners, that usually means fewer surprises at tax time and financial statements you can actually make sense of. We're a two-person team, so you're never passed around — the person who does your books is the same person who answers your email.</p>
+          <p class="copy">We work exclusively in QuickBooks Online, so your books stay consistent and easy to hand off to your CPA.</p>
+          <a class="btn btn-primary" href="about.html">More about us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow">Pricing</div>
+        <h2>Transparent pricing, no contracts</h2>
+        <p>Monthly plans start at $350 and scale with your business — quarterly and annual options are available too.</p>
+      </div>
+      <div style="text-align:center;">
+        <a class="btn btn-secondary" href="pricing.html">See full pricing</a>
+      </div>
     </div>
   </section>
 
   <section>
     <div class="wrap" style="max-width:640px;">
       <div class="section-head">
-        <h2>Not sure which plan fits?</h2>
-        <p>We'll help you figure out the right tier on a free call.</p>
+        <h2>Ready for cleaner books?</h2>
+        <p>Reach out and let's talk about what your West Covina business needs.</p>
       </div>
 
       <div style="text-align:center; margin-bottom:32px;">
@@ -581,7 +677,7 @@ footer{padding:56px 0 32px; font-size:0.92rem;}
 
       <form class="contact-form" action="https://formspree.io/f/mlgqvzwk" method="POST">
         <input type="hidden" name="_subject" value="New message from Rancho Bookkeeping website">
-        <input type="hidden" name="_source_page" value="Pricing page">
+        <input type="hidden" name="_source_page" value="West Covina page">
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
         <div class="form-row">
           <label for="qc-name">Name</label>
