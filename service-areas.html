@@ -399,6 +399,43 @@ footer{padding:56px 0 32px; font-size:0.92rem;}
 
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;} *{transition:none !important;}}
 
+
+/* ---------- Phone-first additions ---------- */
+.nav-phone svg{display:inline-block; vertical-align:-2px;}
+.btn-call{display:inline-flex; align-items:center; justify-content:center; gap:9px;}
+.btn-call svg{flex-shrink:0;}
+.cta-pair{display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:12px;}
+.call-note{margin:14px 0 0; font-size:0.92rem; color:var(--ink-soft); text-align:center;}
+.hero .hero-link{color:#fff; font-weight:600; text-decoration:underline; text-underline-offset:4px; align-self:center; padding:0 6px;}
+.cta-band .btn-secondary{background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,0.85);}
+.cta-band .btn-secondary:hover{background:rgba(255,255,255,0.12); border-color:#fff;}
+.cta-band .cta-pair{justify-content:flex-start;}
+.call-bar{display:none;}
+/* Header fit: keep the full logo visible; switch to the menu button below 1100px */
+@media (min-width:1100px) and (max-width:1439px){
+  nav{gap:16px;}
+  .nav-contact-group .nav-secondary[href^="mailto:"]{display:none !important;}
+}
+@media (max-width:1099px){
+  nav{position:fixed; top:70px; left:0; right:0; background:var(--card); flex-direction:column; align-items:flex-start; padding:22px 28px 30px; box-shadow:var(--shadow-sm); gap:18px; display:none;}
+  nav.open{display:flex;}
+  .nav-contact-group{align-self:flex-start; flex-direction:column; align-items:flex-start; gap:10px;}
+  .nav-toggle{display:block; background:var(--green); color:#fff; border:none; border-radius:999px; padding:8px 14px; font-weight:600; font-size:0.85rem; cursor:pointer; flex-shrink:0;}
+  .header-inner{padding:16px 18px;}
+}
+@media (max-width:1099px){
+  .call-bar{
+    display:block; position:fixed; left:0; right:0; bottom:0; z-index:60;
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    background:rgba(255,255,255,0.97); box-shadow:0 -4px 16px rgba(0,0,0,0.14);
+  }
+  .call-bar a{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    background:var(--gold); color:#fff; font-weight:700; font-size:1.05rem;
+    padding:14px 18px; border-radius:999px;
+  }
+  body{padding-bottom:78px;}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -559,6 +596,8 @@ footer{padding:56px 0 32px; font-size:0.92rem;}
   "description": "Remote monthly bookkeeping and cleanup/catch-up services for small businesses, run by a husband-and-wife team based in Rancho Cucamonga, CA."
 }
 </script>
+<!-- Microsoft Advertising UET tag -->
+<script>(function(w,d,t,u,o){w[u]=w[u]||[],o.ts=(new Date).getTime();var n=d.createElement(t);n.src="https://bat.bing.net/bat.js?ti="+o.ti+("uetq"!=u?"&q="+u:""),n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&"loaded"!==s&&"complete"!==s||(o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad"),n.onload=n.onreadystatechange=null)};var i=d.getElementsByTagName(t)[0];i.parentNode.insertBefore(n,i)})(window,document,"script","uetq",{ti:"343285139",enableAutoSpaTracking:true});</script>
 </head>
 <body>
 
@@ -575,8 +614,8 @@ footer{padding:56px 0 32px; font-size:0.92rem;}
       <a class="nav-link" href="blog.html">Blog</a>
       <a class="nav-link" href="contact.html">Contact</a>
       <div class="nav-contact-group" style="display:flex; align-items:center; flex-wrap:nowrap; gap:14px; white-space:nowrap;">
-        <a class="nav-phone" href="mailto:info@ranchobookkeeping.com" style="display:inline-flex; align-items:center; gap:7px; white-space:nowrap;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0;"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>info@ranchobookkeeping.com</a>
-        <a class="nav-secondary" href="tel:9092066765" style="display:inline-flex; align-items:center; gap:6px; white-space:nowrap;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(909) 206-6765</a>
+        <a class="nav-phone" href="tel:9092066765" data-loc="header" style="display:inline-flex; align-items:center; gap:6px; white-space:nowrap;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (909) 206-6765</a>
+        <a class="nav-secondary" href="mailto:info@ranchobookkeeping.com" style="display:inline-flex; align-items:center; gap:7px; white-space:nowrap;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0;"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>info@ranchobookkeeping.com</a>
       </div>
     </nav>
   </div>
@@ -643,7 +682,8 @@ footer{padding:56px 0 32px; font-size:0.92rem;}
       </div>
 
       <div style="text-align:center; margin-bottom:32px;">
-        <a class="btn btn-primary" href="https://calendar.app.google/5oxmcEorAY568XzD6" target="_blank" rel="noopener" onclick="gtag('event', 'book_a_call_click', {'event_category': 'engagement', 'event_label': 'Book a free call'});">Book a free call</a>
+        <div class="cta-pair"><a class="btn btn-primary btn-call" href="tel:9092066765" data-loc="page-cta"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (909) 206-6765</a><a class="btn btn-secondary" href="https://calendar.app.google/5oxmcEorAY568XzD6" target="_blank" rel="noopener" onclick="gtag('event', 'book_a_call_click', {'event_category': 'engagement', 'event_label': 'Book a free call'});">Book a free call</a></div>
+        <p class="call-note">Can't pick up? Leave a message and we'll call you back.</p>
       </div>
 
       <form class="contact-form" action="https://formspree.io/f/mlgqvzwk" method="POST">
@@ -682,8 +722,8 @@ footer{padding:56px 0 32px; font-size:0.92rem;}
       </div>
       <div class="footer-col">
         <h3>Contact</h3>
+        <a href="tel:9092066765" data-loc="footer" style="display:flex; align-items:center; gap:6px; white-space:nowrap; margin-bottom:8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><strong>(909) 206-6765</strong></a>
         <a href="mailto:info@ranchobookkeeping.com" style="display:flex; align-items:center; gap:7px; white-space:nowrap; margin-bottom:8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0;"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><strong>info@ranchobookkeeping.com</strong></a>
-        <a href="tel:9092066765" style="display:flex; align-items:center; gap:6px; white-space:nowrap; margin-bottom:8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><strong>(909) 206-6765</strong></a>
         <p style="display:flex; align-items:center; gap:6px; margin-top:4px; font-size:0.85rem; opacity:0.75; white-space:nowrap;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0; opacity:0.65;"><path d="M12 21s-7-7.5-7-12a7 7 0 1 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.3"/></svg> Rancho Cucamonga, CA</p>
       </div>
       <div class="footer-col">
@@ -709,5 +749,25 @@ footer{padding:56px 0 32px; font-size:0.92rem;}
   });
 </script>
 
+<script>
+/* Conversion tracking: phone taps, booking-link clicks, form submits -> Google (GA4) and Microsoft (UET) */
+(function () {
+  function track(name, label, loc) {
+    try { if (typeof gtag === 'function') gtag('event', name, {'event_category': 'engagement', 'event_label': label, 'link_location': loc || '', 'transport_type': 'beacon'}); } catch (x) {}
+    try { window.uetq = window.uetq || []; window.uetq.push('event', name, {'event_category': 'engagement', 'event_label': label, 'link_location': loc || ''}); } catch (x) {}
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('tel:') === 0) track('phone_click', location.pathname, a.getAttribute('data-loc') || 'other');
+    else if (h.indexOf('calendar.app.google') > -1) track('book_a_call_click', location.pathname);
+  });
+  document.addEventListener('submit', function (e) {
+    if (e.target && e.target.tagName === 'FORM') track('form_submit', location.pathname);
+  });
+})();
+</script>
+<div class="call-bar"><a href="tel:9092066765" data-loc="mobile-bar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (909) 206-6765</a></div>
 </body>
 </html>
